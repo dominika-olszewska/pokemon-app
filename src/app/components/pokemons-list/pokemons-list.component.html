@@ -1,0 +1,9 @@
+<p>
+  pokemons-list works!
+</p>
+
+<div class="poke-list">
+
+<app-pokemon-item *ngFor="let poke of list$ | async" [pokemon]="poke"></app-pokemon-item>
+</div>
+
