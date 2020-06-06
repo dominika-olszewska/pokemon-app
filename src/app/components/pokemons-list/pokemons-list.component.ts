@@ -40,7 +40,7 @@ export class PokemonsListComponent implements OnInit {
         }
       });
       this.listStateService.setList(this.pokemnonList);
-    });
+  });
   }
 
 

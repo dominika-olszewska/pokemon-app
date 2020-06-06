@@ -1,11 +1,39 @@
 
 :host {
   max-width: 300px;
+  background-color: white;
+  box-shadow: 2px 4px 8px rgba(128, 128, 128, 0.5);
+  margin: 0 auto;
+  border-radius: 8px;
 
   .pokemon-image {
     img {
+      padding: 24px;
 
-      width: 300px;
+      max-width: 300px;
     }
   }
+
+  .pokemon-data {
+    padding: 24px;
+  }
+
+
+}
+
+:host-context(.pokemon-from-list) {
+  .pokemon-data {
+    //border-top: 1px solid rgba(128, 128, 128, 0.5);
+    padding: 24px;
+    background-color: rgba(128, 128, 128, 0.3);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+  }
+
 }

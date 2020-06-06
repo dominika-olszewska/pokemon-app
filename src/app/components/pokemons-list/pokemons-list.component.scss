@@ -1,8 +1,30 @@
+@import "../../../styles/variables";
 :host {
   .poke-list {
 
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(4, 1fr);
     overflow-y: auto;
+    grid-gap: 24px;
+    padding: 40px 20px;
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(small) {
+      grid-template-columns: 1fr;
+    }
+
+    app-pokemon-item {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
   }
 }
+
+

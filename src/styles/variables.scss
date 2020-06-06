@@ -30,7 +30,7 @@ $main-font: 'Open Sans', sans-serif;
     }
   }
   @if $point == large {
-    @media (max-width: 1200px) {
+    @media (max-width: 1320px) {
       @content;
     }
   } @else if $point == medium {
@@ -38,7 +38,7 @@ $main-font: 'Open Sans', sans-serif;
       @content;
     }
   } @else if $point == small {
-    @media (max-width: 767px) {
+    @media (max-width: 667px) {
       @content;
     }
   } @else if $point == extra-small {

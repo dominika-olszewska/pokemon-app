@@ -1,10 +1,10 @@
 <div
-  *ngIf="pokemon.id"
-  id="{{pokemon.id}}"
+  *ngIf="pokemon?.id"
+  id="{{pokemon?.id}}"
   class="pokemon-image"
 >
-  <img [src]="getPokeImage(pokemon.id)">
+  <img [src]="getPokeImage(pokemon?.id)">
 </div>
-<div>{{pokemon.name}}
-  {{pokemon.id}}
-  {{pokemon.shape?.name}}</div>
+<div class="pokemon-data">
+  <span>{{pokemon?.name}}</span>
+</div>
