@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap');
+
+// COLORS
+$background: #F0F2F5;
+$grey: #3b3b3b;
+$grey-2: #595959;
+$grey-3: #b7b7b7;
+$blue: darkcyan;
+$lightgrey: #f4f4f4;
+$white: #ffffff;
+$orange: #f6b93b;
+$transparent-grey: rgba(0, 0, 0, 0.1);
+$transparent-white: rgba(255, 255, 255, 0.5);
+$warning: rgba(255, 0, 0, 0.3);
+
+//TYPOGRAPHY
+$main-font: 'Open Sans', sans-serif;
+
+//MIXIN RULES
+@mixin flexible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin breakpoint($point) {
+  @if $point == extra-large {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  }
+  @if $point == large {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == extra-small {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+}

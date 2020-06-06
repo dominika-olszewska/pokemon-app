@@ -1,0 +1,8 @@
+:host {
+  .poke-list {
+
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    overflow-y: auto;
+  }
+}
