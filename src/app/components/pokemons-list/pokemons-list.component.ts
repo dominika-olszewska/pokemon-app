@@ -3,6 +3,7 @@ import {PokemonApiService} from '../../services/pokemon-api.service';
 import {Observable} from 'rxjs';
 import {PokemonsList, PokemonSpecies} from '../../interfaces/pokemon';
 import {ListsStateService} from '../../services/list-state.service';
+import {NotificationService} from '../../services/notifications.service';
 
 @Component({
   selector: 'app-pokemons-list',
@@ -14,7 +15,11 @@ export class PokemonsListComponent implements OnInit {
   list$: Observable<any>;
 
 
-  constructor(private pokemonApiService: PokemonApiService, private listStateService: ListsStateService) {
+  constructor(
+    private pokemonApiService: PokemonApiService,
+    private listStateService: ListsStateService,
+
+  ) {
     this.list$ = listStateService.list$;
   }
 
@@ -40,9 +45,8 @@ export class PokemonsListComponent implements OnInit {
         }
       });
       this.listStateService.setList(this.pokemnonList);
-  });
+    });
   }
-
 
 
 

@@ -1,3 +1,4 @@
+<script src="pokemon-item.component.ts"></script>
 <div
   *ngIf="pokemon?.id"
   id="{{pokemon?.id}}"
@@ -7,4 +8,5 @@
 </div>
 <div class="pokemon-data">
   <span>{{pokemon?.name}}</span>
+  <button  class="button" (click)="addToPokeball(pokemon.id)">Add to pokeball</button>
 </div>

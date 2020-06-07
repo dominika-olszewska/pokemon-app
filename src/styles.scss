@@ -1,5 +1,6 @@
 @import './styles/variables';
 @import './styles/reset';
+@import '../node_modules/angular2-toaster/src/toaster';
 
 body {
   background-color: $background;
@@ -12,14 +13,13 @@ body {
   text-transform: uppercase;
   background: $transparent-grey;
   padding: 1.25em;
-  border: 0.32em solid $transparent-grey;
+  border: none;
   border-radius: 0.375em;
   display: inline-block;
 
   &:hover {
     color: $white;
-    background: $orange;
-    border-color: $orange;
+    background: #ffcb05;
     transition: all 0.4s ease 0s;
     cursor: pointer;
   }

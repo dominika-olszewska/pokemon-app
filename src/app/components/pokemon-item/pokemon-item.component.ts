@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {NotificationService} from '../../services/notifications.service';
 
 @Component({
   selector: 'app-pokemon-item',
@@ -8,14 +9,19 @@ import {Component, Input, OnInit} from '@angular/core';
 export class PokemonItemComponent implements OnInit {
   @Input() pokemon: any;
 
-  constructor() {
+  constructor(private notificationService: NotificationService,) {
   }
 
   ngOnInit() {
   }
 
-  public getPokeImage(pokeId: string): any {
+  private getPokeImage(pokeId: string): any {
     return `https://pokeres.bastionbot.org/images/pokemon/${pokeId}.png`;
   }
+
+  private addToPokeball(id: string): void {
+    this.notificationService.popToastSuccess(`Added to pokeball ${id}`);
+  }
+
 
 }
