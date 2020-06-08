@@ -1,12 +1,17 @@
-<script src="pokemon-item.component.ts"></script>
-<div
-  *ngIf="pokemon?.id"
-  id="{{pokemon?.id}}"
-  class="pokemon-image"
->
-  <img [src]="getPokeImage(pokemon?.id)">
-</div>
-<div class="pokemon-data">
-  <span>{{pokemon?.name}}</span>
-  <button  class="button" (click)="addToPokeball(pokemon.id)">Add to pokeball</button>
-</div>
+
+<ng-container *ngIf="pokemon; else loader">
+  <div
+    *ngIf="pokemon?.id"
+    id="{{pokemon?.id}}"
+    class="pokemon-image"
+  >
+    <img [src]="getPokeImage(pokemon?.id)">
+  </div>
+  <div class="pokemon-data">
+    <span>{{pokemon?.name}}</span>
+    <button *ngIf="router.url !== '/'" class="button" (click)="addToPokeball(pokemon.id)">Add to pokeball</button>
+  </div>
+</ng-container>
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

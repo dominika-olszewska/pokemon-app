@@ -34,4 +34,10 @@ a {
     color: $blue;
     cursor: pointer;
   }
-}/* You can add global styles to this file, and also import other style files */
+}
+
+#toaster-container {
+  .toast-success {
+    background-color: rebeccapurple !important;
+  }
+}

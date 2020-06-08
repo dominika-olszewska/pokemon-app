@@ -22,4 +22,8 @@ export class NotificationService {
     this.toasterService.pop('error', 'Error', message);
   }
 
+  popToastIno(message) {
+    this.toasterService.pop('info', 'Info', message);
+  }
+
 }

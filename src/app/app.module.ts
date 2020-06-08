@@ -11,6 +11,7 @@ import { PokemonPageComponent } from './pages/pokemon-page/pokemon-page.componen
 import { PokeballPageComponent } from './pages/pokeball-page/pokeball-page.component';
 import {ToasterModule} from 'angular2-toaster';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     HeaderComponent,
     PokemonItemComponent,
     PokemonPageComponent,
-    PokeballPageComponent
+    PokeballPageComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

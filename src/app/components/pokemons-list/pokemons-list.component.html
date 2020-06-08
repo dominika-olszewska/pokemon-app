@@ -1,4 +1,4 @@
-<div class="poke-list">
+<div class="poke-list" *ngIf="list$ | async; else loader">
 
   <app-pokemon-item
     *ngFor="let poke of list$ | async"
@@ -9,4 +9,7 @@
 
   </app-pokemon-item>
 </div>
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
 

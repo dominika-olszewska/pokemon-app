@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NotificationService} from '../../services/notifications.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-item',
@@ -9,7 +10,7 @@ import {NotificationService} from '../../services/notifications.service';
 export class PokemonItemComponent implements OnInit {
   @Input() pokemon: any;
 
-  constructor(private notificationService: NotificationService,) {
+  constructor(private notificationService: NotificationService, private router: Router) {
   }
 
   ngOnInit() {
