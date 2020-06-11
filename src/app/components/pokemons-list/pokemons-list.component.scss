@@ -24,6 +24,13 @@
         background-color: darken(white, 10%);
       }
     }
+    .pokemon-from-list {
+      max-width: 300px;
+      background-color: white;
+      box-shadow: 2px 4px 8px rgba(128, 128, 128, 0.5);
+      margin: 0 auto;
+      border-radius: 8px;
+    }
 
   }
   .button {

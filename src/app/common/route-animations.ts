@@ -38,22 +38,8 @@ const slideRightAnimation: AnimationMetadata[] = [
   ]),
 ];
 
-const slideUpAnimation: AnimationMetadata[] = [
-  query(':enter, :leave', style({position: 'fixed', width: '100%'}), {optional: true}),
-  group([
-    query(':enter', [
-      style({transform: 'translateY(100%)', display: 'block', height: '100%', zIndex: 1000}),
-      animate(animationTiming, style({transform: 'translateY(0%)'})),
-    ], {optional: true}),
-    query(':leave', [
-      style({transform: 'translateY(0%)', zIndex: -1000}),
-    ], {optional: true}),
-  ]),
-];
 
-
-const fader = [
-  // Set a default  style for enter and leave
+const fader: AnimationMetadata[] = [
   query(':enter, :leave', [
     style({
       position: 'absolute',
@@ -63,12 +49,10 @@ const fader = [
       transform: 'scale(0) translateY(100%)',
     }),
   ]),
-  // Animate the new page in
   query(':enter', [
     animate('600ms ease', style({opacity: 1, transform: 'scale(1) translateY(0)'})),
   ])
 ];
-
 
 export const ROUTE_ANIMATIONS: AnimationTriggerMetadata = trigger('routeAnimations', [
 
@@ -80,7 +64,6 @@ export const ROUTE_ANIMATIONS: AnimationTriggerMetadata = trigger('routeAnimatio
 
   transition('PokemonPage => PokeballPage', slideLeftAnimation),
   transition('PokeballPage => PokemonPage', slideRightAnimation),
-
 
 ]);
 

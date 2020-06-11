@@ -14,6 +14,7 @@ export class PokemonPageComponent implements OnInit {
   list$: Observable<any>;
   pokemon: any;
 
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private listStateService: ListsStateService,
@@ -31,5 +32,7 @@ export class PokemonPageComponent implements OnInit {
       this.pokemon = pokemon;
     });
   }
+
+
 
 }

@@ -4,11 +4,17 @@
     id="{{pokemon?.id}}"
     class="pokemon-image"
   >
-    <img [src]="getPokeImage(pokemon?.id)" >
+    <img [src]="getPokeImage(pokemon?.id)">
   </div>
   <div class="pokemon-data">
     <span>{{pokemon?.name}}</span>
-    <button *ngIf="router.url !== '/'" class="button" (click)="addToPokeball(pokemon.id)">Add to pokeball</button>
+    <ng-container *ngIf="router.url !== '/'">
+      <button *ngIf="!isInStorageFn(pokemon?.id)" class="button" (click)="addToPokeball(pokemon)">Add to pokeball</button>
+      <div>Abilities: <span *ngFor="let ability of pokemon.abilities"> {{ability.ability.name}}, </span></div>
+      <div>base experience{{pokemon.base_experience}}</div>
+      <div>height{{pokemon.height}}</div>
+      <div>Moves: <span *ngFor="let move of pokemon.moves"> {{move.move.name}}, </span></div>
+    </ng-container>
   </div>
 </ng-container>
 <ng-template #loader>

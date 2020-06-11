@@ -14,4 +14,17 @@ export class SessionStorageService {
   public getFromSessionStorage(key: string): any {
     return sessionStorage.getItem(key);
   }
+
+  setItem(key, value) {
+    sessionStorage.setItem(key, JSON.stringify(value));
+  }
+
+  getItem(key) {
+    const value = sessionStorage.getItem(key);
+    return JSON.parse(value);
+  }
+
+  deleteItem(key) {
+    sessionStorage.removeItem(key);
+  }
 }

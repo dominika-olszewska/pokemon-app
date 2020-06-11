@@ -1,1 +1,10 @@
-<p>Pokeball</p>
+<p>Your favourites pokemons: </p>
+<div *ngFor="let poke of pokemons; trackBy: trackByFn">
+<!--  <img [src]="poke.sprites.front_default">-->
+<!--  {{poke.name}}-->
+  <button  [routerLink]="['/pokemon/', poke.id]">findOutMore</button>
+  <button (click)="deleteFromList(poke)">x</button>
+<app-pokemon-detail  [pokemon]="poke"></app-pokemon-detail>
+</div>
+
+

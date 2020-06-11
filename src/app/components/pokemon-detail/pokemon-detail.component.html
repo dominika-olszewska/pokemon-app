@@ -1,0 +1,14 @@
+<div class="pokeball" [id]="pokemon.id" (click)="clickEvent($event)">
+  <div class="top" [ngClass]="isOpen ? 'open' : ''">
+    <div class="middle_circle" >
+      <div class="white_in"></div>
+    </div>
+  </div>
+  <div class="bottom"></div>
+  <div class="pokemon">
+    <img [src]="pokemon.sprites.front_default">
+  </div>
+</div>
+    {{pokemon.name}}
+
+
