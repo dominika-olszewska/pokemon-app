@@ -1,10 +1,11 @@
-<p>Your favorite pokemen are securely stored in pokeballs. Open them to find out.</p>
+<p *ngIf="pokemons.length > 0; else message">Your favorite pokemons are securely stored in pokeballs. Open them to find out.</p>
+<ng-template #message>
+  <p>You don't have any pokemons on your favorite list yet</p>
+</ng-template>
 <div class="poke-wrapper">
-
   <app-pokemon-detail *ngFor="let poke of pokemons; trackBy: trackByFn"
                       (deletePokemonClicked)="deleteFromList($event)"
                       [pokemon]="poke">
-
   </app-pokemon-detail>
 </div>
 

@@ -15,8 +15,7 @@ export class PokemonDetailComponent implements OnInit {
 
   ngOnInit() {
   }
-  public clickEvent(event) {
-    console.log(event);
+  public clickEvent() {
     this.isOpen = !this.isOpen;
   }
 }

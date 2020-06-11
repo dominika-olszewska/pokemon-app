@@ -30,7 +30,7 @@ export class PokemonsListComponent implements OnInit {
     this.getPokeList();
   }
 
-  public getPokeList(offset = 0, limit = 9): void {
+  public getPokeList(offset = 0, limit = 12): void {
     if (this.sessionStorageService.getFromSessionStorage('offset')) {
       offset = this.sessionStorageService.getFromSessionStorage('offset');
       limit = this.sessionStorageService.getFromSessionStorage('limit');

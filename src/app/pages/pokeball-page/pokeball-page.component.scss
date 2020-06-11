@@ -6,6 +6,7 @@ p {
   padding: 20px;
   font-size: 20px;
 }
+
 .poke-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -21,12 +22,9 @@ p {
     grid-template-columns: 1fr;
   }
 
-
   app-pokemon-detail {
     box-shadow: 2px 4px 8px rgba(128, 128, 128, 0.4);
     border-radius: 8px;
     padding: 20px;
-
-
   }
 }
