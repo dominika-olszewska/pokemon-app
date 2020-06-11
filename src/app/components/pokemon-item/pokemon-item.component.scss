@@ -7,7 +7,6 @@
     height: 305px;
     margin: 0 auto;
 
-
     img {
       padding: 24px;
       max-width: 300px;
@@ -21,19 +20,19 @@
 }
 
 :host-context(.pokemon-from-list) {
-   .pokemon-data {
-     padding: 24px;
-     background-color: rgba(128, 128, 128, 0.3);
-     text-align: center;
-     text-transform: uppercase;
-     font-weight: bold;
-     color: white;
-     border-bottom-left-radius: 8px;
-     border-bottom-right-radius: 8px;
+  .pokemon-data {
+    padding: 24px;
+    background-color: rgba(128, 128, 128, 0.3);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 
-   }
+  }
 
- }
+}
 
 
 :host-context(.pokemon-info) {
@@ -43,6 +42,43 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .pokemon-data {
+    .name {
+      font-weight: bold;
+      text-align: center;
+      font-size: 30px;
+      background-color: white;
+      padding: auto;
+      height: 44px;
+    }
+
+    .button {
+      font-size: 24px;
+      position: absolute;
+      right: 24px;
+      border-radius: 0;
+      padding: 8px;
+    }
+
+    .info {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+
+      .skill-name {
+        color: #385FAA;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+    div {
+      padding-bottom: 20px;
+    }
+    ul {
+      list-style-type: none;
+    }
+
   }
 
 }
