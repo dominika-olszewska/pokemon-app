@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {SessionStorageService} from '../../services/session-storage.service';
 import {PokemonApiService} from '../../services/pokemon-api.service';
+import {NotificationService} from '../../services/notifications.service';
 
 @Component({
   selector: 'app-pokeball-page',
@@ -10,11 +11,11 @@ import {PokemonApiService} from '../../services/pokemon-api.service';
 export class PokeballPageComponent implements OnInit {
   pokeIds: any[];
   pokemons: any[] = [];
-  isOpen = false;
 
   constructor(
     private sessionStorageService: SessionStorageService,
-    private pokemonApiService: PokemonApiService,) {
+    private pokemonApiService: PokemonApiService,
+    private notificationService: NotificationService) {
   }
 
   ngOnInit() {
@@ -51,6 +52,7 @@ export class PokeballPageComponent implements OnInit {
 
   public deleteFromList(pokemon: any): void {
     this.deleteFromSessionStorage(pokemon, 'pokeIds');
+    this.notificationService.popToastWarning(`You have deleted ${pokemon.name} from your favorite pokemons list`);
   }
 
   private trackByFn(index): number {

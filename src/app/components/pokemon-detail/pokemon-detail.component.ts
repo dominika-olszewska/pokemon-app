@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -7,6 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PokemonDetailComponent implements OnInit {
   @Input() pokemon: any;
+  @Output() deletePokemonClicked: EventEmitter<any> = new EventEmitter<any>();
+
   isOpen = false;
 
   constructor() { }

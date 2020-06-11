@@ -1,1 +1,32 @@
+@import "../../../styles/variables";
 
+p {
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+.poke-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  padding: 40px 20px;
+  @include breakpoint(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint(small) {
+    grid-template-columns: 1fr;
+  }
+
+
+  app-pokemon-detail {
+    box-shadow: 2px 4px 8px rgba(128, 128, 128, 0.4);
+    border-radius: 8px;
+    padding: 20px;
+
+
+  }
+}

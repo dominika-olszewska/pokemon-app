@@ -1,6 +1,8 @@
+
+
 <div class="pokeball" [id]="pokemon.id" (click)="clickEvent($event)">
   <div class="top" [ngClass]="isOpen ? 'open' : ''">
-    <div class="middle_circle" >
+    <div class="middle_circle">
       <div class="white_in"></div>
     </div>
   </div>
@@ -9,6 +11,12 @@
     <img [src]="pokemon.sprites.front_default">
   </div>
 </div>
-    {{pokemon.name}}
+
+<div class="poke-name">{{pokemon.name | uppercase}}</div>
+<div class="buttons">
+
+<button class="button" [routerLink]="['/pokemon/', pokemon.id]">SEE DETAILS</button>
+<button class="button" (click)="deletePokemonClicked.emit(pokemon)">x</button>
+</div>
 
 
