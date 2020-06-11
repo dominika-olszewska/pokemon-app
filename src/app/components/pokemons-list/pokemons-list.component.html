@@ -1,9 +1,17 @@
-<p>
-  pokemons-list works!
-</p>
-
-<div class="poke-list">
-
-<app-pokemon-item *ngFor="let poke of list$ | async" [pokemon]="poke"></app-pokemon-item>
+<button *ngIf="list?.previous" class="button prev" (click)="getPrevSet()"><</button>
+<button *ngIf="list?.next" class="button next" (click)="getNextSet()">></button>
+<div class="poke-list" *ngIf="list$ | async">
+  <ng-container *ngFor="let poke of list$ | async">
+    <app-pokemon-item
+      *ngIf="list$ | async; else loader"
+      [pokemon]="poke"
+      [routerLink]="'/pokemon/'+ poke.id"
+      class="pokemon-from-list"
+    >
+    </app-pokemon-item>
+  </ng-container>
 </div>
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
 

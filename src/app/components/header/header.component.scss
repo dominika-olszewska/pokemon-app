@@ -1,14 +1,60 @@
-.header-wrapper{
+@import "../../../styles/variables";
+
+
+.header-wrapper {
   background-color: #385FAA;
   height: 70px;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-areas: "back logo pokeball";
   position: sticky;
   top: 0;
   overflow: hidden;
+  box-shadow: 2px 4px 8px rgba(128, 128, 128, 0.4);
+  z-index: 10;
+
+  @include breakpoint(small) {
+    grid-template-columns: 40px 1fr 90px;
+  }
 
   img {
     height: 60px;
+    grid-area: logo;
+
+    margin: auto auto;
+  }
+
+  span {
+    color: white;
+    margin: auto;
+
+    a {
+      height: 100%;
+      width: 100%;
+      color: white;
+
+      &:hover {
+        color: #ffcb05;
+      }
+
+      span {
+        &:hover {
+          color: #ffcb05;
+        }
+
+        @include breakpoint(small) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .back {
+    grid-area: back;
+  }
+
+  .pokeball {
+    grid-area: pokeball;
   }
 }

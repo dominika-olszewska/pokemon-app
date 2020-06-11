@@ -1,0 +1,68 @@
+.pokeball {
+  margin: 0;
+  transform: scale(0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .top {
+    background-color: #EB2224;
+    height: 110px;
+    width: 230px;
+    border-radius: 195px 195px 0 0;
+    border-bottom: 6px solid #000000;
+    transition: transform;
+  }
+
+
+  .middle_circle {
+    background-color: #FFFFFF;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 70px 65px;
+    position: absolute;
+    border: 12px solid #000000;
+  }
+
+
+  .bottom {
+    background-color: #FFFFFF;
+    height: 110px;
+    width: 230px;
+    border-radius: 0 0 195px 195px;
+    border-top: 6px solid #000000;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.open {
+  transform: translateY(-120px);
+}
+
+.pokemon {
+  position: relative;
+  top: -180px;
+  z-index: -1;
+  transform: scale(1.8);
+}
+
+.poke-name {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+
+  .button {
+    margin-right: 20px;
+  }
+}

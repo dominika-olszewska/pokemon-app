@@ -1,3 +1,6 @@
-<!--<router-outlet></router-outlet>-->
 <app-header></app-header>
-<app-pokemons-list></app-pokemons-list>
+<toaster-container></toaster-container>
+<div [@routeAnimations]="o && o.activatedRouteData
+      && o.activatedRouteData['viewName']">
+  <router-outlet #o="outlet"></router-outlet>
+</div>

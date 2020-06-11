@@ -7,18 +7,31 @@ import {PokemonsListComponent} from './components/pokemons-list/pokemons-list.co
 import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { PokemonItemComponent } from './components/pokemon-item/pokemon-item.component';
+import { PokemonPageComponent } from './pages/pokemon-page/pokemon-page.component';
+import { PokeballPageComponent } from './pages/pokeball-page/pokeball-page.component';
+import {ToasterModule} from 'angular2-toaster';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LoaderComponent } from './components/loader/loader.component';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonsListComponent,
     HeaderComponent,
-    PokemonItemComponent
+    PokemonItemComponent,
+    PokemonPageComponent,
+    PokeballPageComponent,
+    LoaderComponent,
+    PokemonDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ToasterModule.forRoot(),
+    BrowserAnimationsModule,
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
