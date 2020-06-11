@@ -21,7 +21,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     PokemonItemComponent,
     PokemonPageComponent,
     PokeballPageComponent,
-    LoaderComponent
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +29,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     HttpClientModule,
     ToasterModule.forRoot(),
     BrowserAnimationsModule,
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

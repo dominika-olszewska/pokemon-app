@@ -3,7 +3,7 @@
   height: 70px;
   width: 100%;
   display: grid;
-  grid-template-columns: 60px 1fr 60px;
+  grid-template-columns: 120px 1fr 120px;
   grid-template-areas: "back logo pokeball";
   position: sticky;
   top: 0;
@@ -15,5 +15,15 @@
     grid-area: logo;
 
     margin: auto auto;
+  }
+  span {
+    color: white;
+    margin: auto;
+    a {
+      color: #243250;
+      &:hover {
+        color: lighten(#243250, 10%);
+      }
+    }
   }
 }

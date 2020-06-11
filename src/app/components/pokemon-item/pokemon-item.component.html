@@ -1,11 +1,10 @@
-
 <ng-container *ngIf="pokemon; else loader">
   <div
     *ngIf="pokemon?.id"
     id="{{pokemon?.id}}"
     class="pokemon-image"
   >
-    <img [src]="getPokeImage(pokemon?.id)">
+    <img [src]="getPokeImage(pokemon?.id)" >
   </div>
   <div class="pokemon-data">
     <span>{{pokemon?.name}}</span>
@@ -15,3 +14,4 @@
 <ng-template #loader>
   <app-loader></app-loader>
 </ng-template>
+

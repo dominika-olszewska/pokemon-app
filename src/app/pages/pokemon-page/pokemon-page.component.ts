@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ListsStateService} from '../../services/list-state.service';
 import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
 import {PokemonApiService} from '../../services/pokemon-api.service';
 
 @Component({
@@ -15,16 +14,16 @@ export class PokemonPageComponent implements OnInit {
   list$: Observable<any>;
   pokemon: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private listStateService: ListsStateService, private pokemonApiService: PokemonApiService) {
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private listStateService: ListsStateService,
+    private pokemonApiService: PokemonApiService) {
     this.list$ = listStateService.list$;
   }
 
   ngOnInit() {
     this.pokeId = this.activatedRoute.snapshot.paramMap.get('id');
-
     this.getPokemonById(this.pokeId);
-
-
   }
 
   public getPokemonById(id: any): any {

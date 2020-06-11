@@ -7,14 +7,16 @@ import {PokeballPageComponent} from './pages/pokeball-page/pokeball-page.compone
 const routes: Routes = [
   {
     path: '', component: PokemonsListComponent,
+    data: {viewName: 'HomePage'},
   },
   {
     path: 'pokemon/:id', component: PokemonPageComponent,
+    data: {viewName: 'PokemonPage'},
   },
   {
     path: 'pokeball', component: PokeballPageComponent,
+    data: {viewName: 'PokeballPage'},
   },
-
 ];
 
 @NgModule({
