@@ -6,7 +6,7 @@
   height: 70px;
   width: 100%;
   display: grid;
-  grid-template-columns: 200px 1fr 200px;
+  grid-template-columns: 80px 1fr 80px;
   grid-template-areas: "back logo pokeball";
   position: sticky;
   top: 0;
@@ -21,13 +21,13 @@
   img {
     height: 60px;
     grid-area: logo;
-
     margin: auto auto;
   }
 
   span {
     color: white;
     margin: auto;
+    font-size: 32px;
 
     a {
       height: 100%;
@@ -35,7 +35,7 @@
       color: white;
 
       &:hover {
-        color: #ffcb05;
+        color: #ffcb05 !important;
       }
 
       span {
@@ -58,3 +58,10 @@
     grid-area: pokeball;
   }
 }
+
+.heart {
+  fill: white;
+  position: relative;
+  width: 30px;
+}
+
