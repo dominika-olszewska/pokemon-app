@@ -1,7 +1,7 @@
 <div class="header-wrapper">
   <img src="../../../assets/pokmon-logo.png">
   <span class="back" *ngIf="router.url !== '/'">
-    <a [routerLink]="'/'" class="link">< Back to list</a>
+    <a [routerLink]="'/'" class="link"><</a>
   </span>
   <span class="pokeball" *ngIf="router.url !== '/pokeball'">
     <a [routerLink]="['/', 'pokeball']" class="link">

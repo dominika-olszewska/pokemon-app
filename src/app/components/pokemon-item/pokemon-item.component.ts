@@ -51,7 +51,7 @@ export class PokemonItemComponent implements OnInit {
 
   private addToPokeball(pokemon: any): void {
     this.addToSessionStorage(pokemon, 'pokeIds');
-    this.notificationService.popToastSuccess(`Added to pokeball ${pokemon.name}`);
+    this.notificationService.popToastSuccess(`${pokemon.name} has been added to the pokeball`);
   }
 
 

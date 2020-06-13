@@ -7,9 +7,9 @@
     <img [src]="getPokeImage(pokemon?.id)">
   </div>
   <div class="pokemon-data">
-    <div class="name"><span>{{pokemon?.name | uppercase}}</span>
+    <div class="name"><span class="pokemon-name">{{pokemon?.name | uppercase}}</span>
       <button *ngIf="router.url !== '/' && !isInStorageFn(pokemon?.id)" class="button" (click)="addToPokeball(pokemon)">
-        Add to pokeball
+        +
       </button>
     </div>
     <div class="info" *ngIf="router.url !== '/'">

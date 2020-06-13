@@ -52,12 +52,17 @@
       background-color: white;
       padding: auto;
       height: 44px;
+      display: grid;
+      grid-template-columns: 1fr 50px;
+      grid-template-areas: "name button";
+    }
+    .pokemon-name {
+      grid-area: name;
     }
 
     .button {
+      grid-area: button;
       font-size: 24px;
-      position: absolute;
-      right: 24px;
       border-radius: 0;
       padding: 8px;
     }
